@@ -29,7 +29,27 @@ div.titlebar {
     max-width: 800px;
     max-height: 200px;
 }
-  
+
+input {
+    text-align: center;
+    border-style: none solid none none;
+    border-color: #FEFEFE;
+    background-color: #454545;
+    color: white;
+    border: white;
+    width: 10%;
+    overflow: hidden;
+    line-height: 1.4;
+    font-size: 16px;
+    margin: 0;
+    padding: 1em;
+}
+
+input[type=submit] {
+    border-style: none;
+    background-color: #006699;
+}
+
 li {
     float: left;
 }
@@ -47,4 +67,8 @@ a:link {
 
 a:visited {
     color:#0066
+}
+
+form {
+    float: left;
 }
