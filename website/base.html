@@ -28,16 +28,32 @@
        </div>
 
        <!--model input fields-->
-       <div class = 'navigation' style>
+       <!--TODO make industry, gov entity, stock into selection
+           with text responsiveness.-->
+       <!--TODO appropiate form action
+           1. sends params to model and prints result
+           2. if advanced toggled, query data on stock-->
+       <div class = 'input_param' style>
+            <li><b> start year </b></li>
+            <li><b> end year </b></li>
+            <li><b> stock </b></li>
+            <li><b> industry </b></li>
+            <li><b> gov. entity </b></li>
+            <li><b> show advanced </b></li>
+        </div>
+
+        <div class = 'navigation' style>
             <form action="/model.py">
-              <input type="text" name="start_year" value="start year">
-              <input type="text" name="end_year" value="end year">
-              <input type = "text" name = "stock" value = "stock">
-              <input type = "text" name = "industry" value = "industry">
-              <input type = "text" name = "gov" value = "gov">
-              <input type="submit" value="predict!">
+            <input type="text" name="start_year" value="1999">
+            <input type="text" name="end_year" value="2019">
+            <input type = "text" name = "stock" value = "INTU">
+            <input type = "text" name = "industry" value = "COPYRIGHT">
+            <input type = "text" name = "gov" value = "SENATE">
+            <input type = "checkbox" name='advanced'>
+            <input type="submit" value="predict!">
             </form>
        </div>
+
     </body>
 
 </html>
