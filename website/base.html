@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Advocate </title>
+        <!--establish css-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--Title-->
+        <!--TODO replace text with svg logo-->
+        <div class = "titlebar" style>
+            <h2> Advocate </h2>
+            <h3> using data science to see through political opacity</h3>
+        </div>
+
+        <!--navigation for Main and About-->
+        <div class = "navigation" style>
+            <li> <a href="base.html">Main</a> </li>
+            <li> <a href="about.html"> About The Project</a> </li>
+        </div>
+        
+       <!--contextual paragraph-->
+       <div>
+        <p>
+        Advocate improves the conversation on lobbying using an interactive model that predicts the effect of contributions on a bill's margin. It is a powerful way to evaluate how contributions could change the makeup of votes, both in support or against. Play with the widget below to predict a hypothetical contribution by a given company (identified as stock), the associated industry, and the government entity that recieved it.
+        </p>
+       </div>
+
+       <!--model input fields-->
+       <!--TODO make industry, gov entity, stock into selection
+           with text responsiveness.-->
+       <!--TODO appropiate form action
+           1. sends params to model and prints result
+           2. if advanced toggled, query data on stock-->
+       <div class = 'input_param' style>
+            <li><b> start year </b></li>
+            <li><b> end year </b></li>
+            <li><b> stock </b></li>
+            <li><b> industry </b></li>
+            <li><b> gov. entity </b></li>
+            <li><b> show advanced </b></li>
+        </div>
+
+        <div class = 'navigation' style>
+            <form action="/model.py">
+            <input type="text" name="start_year" value="1999">
+            <input type="text" name="end_year" value="2019">
+            <input type = "text" name = "stock" value = "INTU">
+            <input type = "text" name = "industry" value = "COPYRIGHT">
+            <input type = "text" name = "gov" value = "SENATE">
+            <input type = "checkbox" name='advanced'>
+            <input type="submit" value="predict!">
+            </form>
+       </div>
+
+    </body>
+
+</html>
